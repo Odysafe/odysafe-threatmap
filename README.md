@@ -16,6 +16,14 @@ It is designed for analysts who want results that are:
 > **No LLM. No cloud analysis. No automatic threat attribution. No hidden guessing.**
 
 ---
+## 📊 Example Excel Output
+
+Odysafe Threatmap generates analyst-ready Excel workbooks with CTI dashboards, IOCs, MITRE ATT&CK techniques, tactics, detection information, mitigations and provenance.
+
+<p align="center">
+  <img src="image/excel-threatmap.png" alt="Odysafe Threatmap Excel Dashboard" width="100%">
+</p>
+
 
 # ✨ What Odysafe Does
 
