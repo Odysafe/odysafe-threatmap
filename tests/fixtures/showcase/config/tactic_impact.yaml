@@ -1,0 +1,8 @@
+tactics:
+  initial-access: {weight: 5, impact_label: "Showcase critical"}
+  execution: {weight: 4, impact_label: "Showcase high"}
+  persistence: {weight: 4, impact_label: "Showcase high"}
+  credential-access: {weight: 5, impact_label: "Showcase critical"}
+  discovery: {weight: 2, impact_label: "Showcase moderate"}
+  command-and-control: {weight: 3, impact_label: "Showcase moderate"}
+  exfiltration: {weight: 5, impact_label: "Showcase critical"}

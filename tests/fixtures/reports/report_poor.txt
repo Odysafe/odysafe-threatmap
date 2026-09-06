@@ -1,0 +1,1 @@
+This narrative contains no structured indicators or ATT&CK technique identifiers.

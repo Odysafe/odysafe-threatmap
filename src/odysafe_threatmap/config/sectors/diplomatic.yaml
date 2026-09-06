@@ -1,0 +1,8 @@
+id: diplomatic
+order: 8
+name: Diplomatic
+icon: "🌐"
+description: Diplomatic missions, foreign affairs, and international relations.
+aliases: [diplomatic, diplomacy, embassy, foreign affairs, diplomatique]
+mitre: {industries: [diplomatic]}
+keywords: [diplomatic, embassy, foreign affairs]

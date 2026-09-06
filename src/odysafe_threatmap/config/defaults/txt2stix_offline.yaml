@@ -1,0 +1,15 @@
+# This policy is positive-only and is validated before any txt2stix call.
+# AI extractors, remote services, tokens, CTI Butler, and Vulmatch are forbidden.
+relationship_mode: standard
+no_remote: true
+
+# These are Odysafe pattern categories. They do not enable txt2stix aggregate
+# imports; an audited pattern-only runner is required before execution.
+allowed_patterns:
+  - pattern_ioc
+  - pattern_attack
+  - pattern_cve
+
+# A lookup is allowed only when it is listed here and references a controlled,
+# existing local file. The default policy enables no lookups.
+local_lookup_files: {}

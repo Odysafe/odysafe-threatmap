@@ -1,0 +1,4 @@
+critical_threshold: 150
+high_threshold: 100
+moderate_threshold: 50
+low_threshold: 0

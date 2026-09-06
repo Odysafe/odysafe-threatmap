@@ -1,0 +1,3 @@
+Technique-only report
+
+The report explicitly lists T1059 and T1566.001.

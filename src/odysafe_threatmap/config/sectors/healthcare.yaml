@@ -1,0 +1,8 @@
+id: healthcare
+order: 3
+name: Healthcare
+icon: "🏥"
+description: Hospitals, healthcare providers, medical services, and life sciences.
+aliases: [healthcare, health, medical, hospital, santé, sante]
+mitre: {industries: [healthcare]}
+keywords: [healthcare, medical, hospital, clinical]

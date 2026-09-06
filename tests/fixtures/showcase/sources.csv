@@ -1,0 +1,6 @@
+report,source_name,primary_source_id,published_date
+report_duplicate.txt,vendor-a-copy,primary-source-alpha,2026-01-10
+report_vendor_a.txt,vendor-a,primary-source-alpha,2026-01-10
+report_vendor_b.txt,vendor-b,primary-source-alpha,2026-01-11
+report_cert.txt,cert-example,primary-source-bravo,2026-01-12
+report_research.txt,research-example,,2026-01-13

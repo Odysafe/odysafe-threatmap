@@ -1,0 +1,8 @@
+version: "showcase-1.0"
+groups:
+  - {attack_id: G0016, sectors: [financial, government, technology], regions: [Europe, North America], origin: N/A, source: showcase-fixture}
+  - {attack_id: G0018, sectors: [energy, government, defense], regions: [Europe], origin: N/A, source: showcase-fixture}
+  - {attack_id: G0046, sectors: [financial, technology], regions: [North America], origin: N/A, source: showcase-fixture}
+  - {attack_id: G0032, sectors: [healthcare, defense], regions: [Asia], origin: N/A, source: showcase-fixture}
+  - {attack_id: G0010, sectors: [telecommunications, research], regions: [Middle East, Europe], origin: N/A, source: showcase-fixture}
+  - {attack_id: G9001, sectors: [technology, research], regions: [Global], origin: N/A, source: showcase-fixture}

@@ -1,0 +1,8 @@
+id: telecommunications
+order: 6
+name: Telecommunications
+icon: "📡"
+description: Telecommunications operators, networks, and connectivity providers.
+aliases: [telecommunications, telecom, telecoms, telco]
+mitre: {industries: [telecommunications]}
+keywords: [telecom, network, carrier, connectivity]

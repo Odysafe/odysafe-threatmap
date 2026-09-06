@@ -1,0 +1,8 @@
+id: technology
+order: 5
+name: Technology
+icon: "💻"
+description: Software, cloud, hardware, and digital technology providers.
+aliases: [technology, tech, software, cloud, technologie]
+mitre: {industries: [technology]}
+keywords: [technology, software, cloud, hardware]

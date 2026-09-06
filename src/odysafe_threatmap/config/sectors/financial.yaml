@@ -1,0 +1,8 @@
+id: financial
+order: 1
+name: Finance
+icon: "💳"
+description: Banks, insurance, markets, payments, and financial services.
+aliases: [finance, financial, banking, bank, banque, banques, assurance, assurances]
+mitre: {industries: [financial-services]}
+keywords: [banking, finance, insurance, payment, fintech]

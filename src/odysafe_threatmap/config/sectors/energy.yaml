@@ -1,0 +1,8 @@
+id: energy
+order: 2
+name: Energy
+icon: "⚡"
+description: Energy production, distribution, utilities, oil, and gas.
+aliases: [energy, energie, énergie, utilities, oil and gas]
+mitre: {industries: [energy]}
+keywords: [energy, utility, electricity, oil, gas]

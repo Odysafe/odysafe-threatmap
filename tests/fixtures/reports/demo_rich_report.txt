@@ -1,0 +1,74 @@
+Demo CTI report for deterministic offline extraction.
+
+Example Group (G1001), also known as Example Alias and Cozy Bear, conducted a
+phishing-focused operation against a fictional financial organisation. The
+report records only explicit indicators and ATT&CK identifiers. It does not
+make an attribution beyond the explicit group reference above. Analysts should
+retain the source report and the local ATT&CK bundle used for validation.
+
+Initial delivery used a message sent from alerts@example.org to an employee at
+security@example.test. The message referenced https://portal.example.test/login
+and https://updates.example.test/download. The same campaign later used the
+defanged domain evil[.]example and the hostname cdn.example.test. DNS telemetry
+also recorded 198.51.100.10, 198.51.100.11, 203.0.113.50, and the IPv6 address
+2001:db8::10. The two public addresses were repeated in several endpoint and
+proxy records. The observed user agent was not used as a detection conclusion.
+
+The attachment was assessed through the explicit techniques T1566.001 and
+T1059. The report also contains T1059.001, T1027, T1071.001, T1105, T1082,
+T1003, T1047, and T1486. T1566.001 appeared twice in the source material and
+T1059.001 appeared twice in the source material. These IDs must be validated
+against the local Enterprise ATT&CK bundle before any enrichment is shown.
+No technique is inferred from prose, process names, URLs, or addresses.
+
+Endpoint analysis identified the sample SHA-256
+0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef, SHA-1
+0123456789abcdef0123456789abcdef01234567, and MD5
+0123456789abcdef0123456789abcdef. A later object had SHA-256
+abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcd. The same
+first SHA-256 was copied into two analyst notes. The file names are preserved
+only as local observations and are not used for semantic matching.
+
+Network controls observed http://evil.example/path, https://evil.example/path,
+http://198.51.100.10/a, and https://cdn.example.test/assets. A duplicate URL
+https://updates.example.test/download was observed by a second sensor. The
+report also lists the defanged address hxxps://evil[.]example/path as an
+observed form. Normalisation may retain the raw and normalised representations
+without changing the source evidence.
+
+The operator used a scripting interpreter under T1059.001 and transferred a
+payload under T1105. Discovery activity explicitly referenced T1082. Credential
+access explicitly referenced T1003. Remote execution explicitly referenced
+T1047. Obfuscated content explicitly referenced T1027. Application layer
+communications explicitly referenced T1071.001. Data impact explicitly
+referenced T1486. The parent identifier T1059 is also present as an explicit
+identifier. These statements intentionally repeat IDs so that occurrence counts
+can be tested without adding analytical inference.
+
+The second section names Second Group (G1002) as a separate explicit mention.
+It does not claim that Second Group performed the operation. The group name is
+present to test exact-name and ATT&CK ID handling. Example Malware (S1001) is
+also named as a local ATT&CK software record. Its mention is not a conclusion
+about deployment in the target organisation.
+
+The organisation reported CVE-2024-0001, CVE-2024-0002, and CVE-2023-9999 in
+its ticketing system. These CVEs are extraction candidates, not exploit claims.
+The email support@example.org and the domain reports.example.test appeared in
+the same ticket. Another email, response@example.net, was included in an
+analyst contact field. These data points must remain exact strings in Excel and
+must never be interpreted as formulas.
+
+For reproducibility, the report contains repeated indicators: evil[.]example,
+198.51.100.10, T1566.001, T1059.001, and CVE-2024-0001. The output should show
+unique values and occurrence counts. It should show text-based warnings when a
+report has too few explicit TTPs, but this rich fixture deliberately contains
+many explicit TTPs. The resulting dashboard should therefore show IOC types,
+techniques, tactics, and non-attributive group overlap where local data exists.
+
+All conclusions in this fixture are bounded by the local data model. No country,
+sector, region, motivation, campaign, or confidence value is implied by the
+descriptions. Sector and region outputs remain dependent on explicit YAML
+mapping. Sigma coverage remains dependent only on exact ATT&CK tags. Multi-
+report corroboration remains dependent only on an explicit primary-source CSV.
+The fixture is intentionally static, local, reproducible, and suitable for
+offline regression tests, visual inspection, and analyst training demonstrations.

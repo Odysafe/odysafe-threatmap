@@ -1,0 +1,9 @@
+Incident report
+
+The phishing message referenced T1566.001 and T1059.001. A repeated reference to
+T1059.001 was observed. An unknown technique T1105 was also recorded.
+The report explicitly mentions Example Group.
+
+Indicators: 198.51.100.10, evil[.]com, https://evil.example/path,
+analyst@example[.]org, CVE-2026-1234, and
+0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef.

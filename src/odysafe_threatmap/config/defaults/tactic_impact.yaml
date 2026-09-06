@@ -1,0 +1,12 @@
+# Odysafe-local heuristic weights. These are not MITRE ATT&CK data.
+tactics:
+  Initial Access: {weight: 4, impact_label: "High operational impact"}
+  Execution: {weight: 4, impact_label: "High operational impact"}
+  Persistence: {weight: 4, impact_label: "High operational impact"}
+  Defense Evasion: {weight: 5, impact_label: "Very high operational impact"}
+  Credential Access: {weight: 5, impact_label: "Very high operational impact"}
+  Discovery: {weight: 2, impact_label: "Moderate operational impact"}
+  Lateral Movement: {weight: 5, impact_label: "Very high operational impact"}
+  Collection: {weight: 3, impact_label: "Moderate operational impact"}
+  Exfiltration: {weight: 5, impact_label: "Very high operational impact"}
+  Impact: {weight: 5, impact_label: "Very high operational impact"}

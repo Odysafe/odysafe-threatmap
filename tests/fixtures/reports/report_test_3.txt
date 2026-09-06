@@ -1,0 +1,3 @@
+Observable-only report
+
+Contact alert@example[.]org and inspect 203.0.113.10 or https://sample.example/login.

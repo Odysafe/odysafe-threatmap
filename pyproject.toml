@@ -1,0 +1,140 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "odysafe-threatmap"
+dynamic = ["version"]
+description = "Offline, deterministic command-line tools for operational cyber threat intelligence."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Odysafe" },
+]
+keywords = ["cti", "mitre-attack", "threat-intelligence", "offline", "sigma"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
+dependencies = [
+  "mitreattack-python>=6.2,<7",
+  "iocsearcher>=3.1,<4",
+  # txt2stix is only reachable through the application's offline allowlist policy.
+  "txt2stix>=1.6,<2",
+  "typer>=0.12,<1",
+  "rich>=13,<15",
+  "prompt-toolkit>=3,<4",
+  "XlsxWriter>=3.1,<4",
+  # Runtime installation includes the supported workbook validation reader.
+  "openpyxl>=3.1,<4",
+  "pydantic>=2,<3",
+  "PyYAML>=6,<7",
+  "platformdirs>=4,<5",
+  "filelock>=3,<4",
+  "rapidfuzz>=3,<4",
+  "python-dateutil>=2.8,<3",
+]
+
+[project.scripts]
+odysafe = "odysafe_threatmap.cli.app:main"
+odysafe-threatmap = "odysafe_threatmap.cli.app:main"
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8,<10",
+  "pytest-cov>=5,<8",
+  "pytest-socket>=0.7,<1",
+  "openpyxl>=3.1,<4",
+]
+dev = [
+  "pytest>=8,<10",
+  "pytest-cov>=5,<8",
+  "pytest-socket>=0.7,<1",
+  "openpyxl>=3.1,<4",
+  "ruff>=0.8,<1",
+  "mypy>=1.13,<2",
+]
+
+[project.urls]
+Documentation = "../Cahier des charges technique — odysafe-threatmap.md"
+
+[dependency-groups]
+dev = [
+  "pytest>=8,<10",
+  "pytest-cov>=5,<8",
+  "pytest-socket>=0.7,<1",
+  "openpyxl>=3.1,<4",
+  "ruff>=0.8,<1",
+  "mypy>=1.13,<2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/odysafe_threatmap"]
+
+[tool.hatch.version]
+path = "src/odysafe_threatmap/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/odysafe_threatmap",
+  "README.md",
+  "CHANGELOG.md",
+  "ARCHITECTURE.md",
+  "install.sh",
+  "start.sh",
+  "uninstall.sh",
+  "pyproject.toml",
+  "uv.lock",
+]
+exclude = [
+  "/iocsearcher/**",
+  "/mitreattack-python/**",
+  "/txt2stix/**",
+  "/tests/**",
+  "/.venv/**",
+  "/odysafe-output/**",
+  "/.cache/**",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-ra --disable-socket"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+extend-exclude = [
+  "iocsearcher",
+  "mitreattack-python",
+  "txt2stix",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/odysafe_threatmap/cli/commands/data.py" = ["B008"]
+"src/odysafe_threatmap/cli/commands/report.py" = ["B008"]
+"src/odysafe_threatmap/cli/commands/actor.py" = ["B008"]
+"src/odysafe_threatmap/cli/commands/sector.py" = ["B008"]
+"src/odysafe_threatmap/cli/commands/navigator.py" = ["B008"]
+"src/odysafe_threatmap/cli/commands/aggregate.py" = ["B008"]
+"src/odysafe_threatmap/cli/commands/coverage.py" = ["B008"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["src"]
+strict = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = ["iocsearcher.*", "mitreattack.*", "xlsxwriter", "yaml"]
+ignore_missing_imports = true

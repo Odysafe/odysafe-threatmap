@@ -1,0 +1,8 @@
+id: retail
+order: 7
+name: Retail
+icon: "🛍"
+description: Retailers, commerce, consumer sales, and distribution.
+aliases: [retail, retailer, commerce, distribution]
+mitre: {industries: [retail]}
+keywords: [retail, commerce, store, consumer]

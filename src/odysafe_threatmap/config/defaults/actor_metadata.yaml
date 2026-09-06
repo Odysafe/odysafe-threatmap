@@ -1,0 +1,15 @@
+# Explicit local curation only. No sectors or regions are inferred from ATT&CK text.
+version: "2026.1"
+groups:
+  - {attack_id: G1001, sectors: [financial, government], regions: [Europe], origin: N/A, source: internal-curation}
+  - {attack_id: G1002, sectors: [energy, financial], regions: [North America], origin: N/A, source: internal-curation}
+  - {attack_id: G0016, sectors: [government, diplomatic], regions: [Europe, North America], origin: Russia, source: internal-curation}
+  - {attack_id: G0001, sectors: [government, technology], regions: [North America], origin: China, source: internal-curation}
+  - {attack_id: G0018, sectors: [government, energy], regions: [Europe], origin: Russia, source: internal-curation}
+  - {attack_id: G0035, sectors: [financial, retail], regions: [North America, Europe], origin: N/A, source: internal-curation}
+  - {attack_id: G0046, sectors: [energy, government], regions: [Middle East], origin: N/A, source: internal-curation}
+  - {attack_id: G0050, sectors: [technology, telecommunications], regions: [Asia-Pacific], origin: N/A, source: internal-curation}
+  - {attack_id: G0064, sectors: [healthcare, government], regions: [North America], origin: N/A, source: internal-curation}
+  - {attack_id: G0070, sectors: [financial, technology], regions: [Europe], origin: N/A, source: internal-curation}
+  - {attack_id: G0082, sectors: [energy, government], regions: [Europe], origin: N/A, source: N/A, comment: "Local curation requires periodic review."}
+  - {attack_id: G0092, sectors: [government, telecommunications], regions: [Asia-Pacific], origin: N/A, source: internal-curation}

@@ -1,0 +1,20 @@
+{
+  "inputs": [],
+  "hashes": {},
+  "parameters": {
+    "command": "showcase sigma coverage",
+    "config_hash_or_version": "4d81114c1d7c2e6ba9a14c8fa22438a51b7448cfe930764979eaf01f586a5974"
+  },
+  "warnings": [],
+  "outputs": [
+    "/home/me/Documents/PROJET/odysafe-threatmap/repo/tests/golden/sigma_showcase.xlsx"
+  ],
+  "versions": {
+    "odysafe-threatmap": "1.1.0"
+  },
+  "attack_dataset": {
+    "version": "showcase-1.0",
+    "path": "/home/me/Documents/PROJET/odysafe-threatmap/repo/tests/fixtures/showcase/attack/enterprise-attack-showcase.json",
+    "sha256": "314ccbfa2bb7b334cdf750fa4ff48932444771d4ab06567a9ec2d39ec75b8ca2"
+  }
+}

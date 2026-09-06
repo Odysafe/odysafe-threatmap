@@ -1,0 +1,8 @@
+id: government
+order: 4
+name: Government
+icon: "🏛"
+description: Public administrations, agencies, and government services.
+aliases: [government, government services, public sector, administration, gouvernement]
+mitre: {industries: [government]}
+keywords: [government, public, administration, agency]

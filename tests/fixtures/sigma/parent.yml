@@ -1,0 +1,7 @@
+title: Parent technique coverage
+id: 00000000-0000-4000-8000-000000000012
+status: test
+level: medium
+tags:
+  - attack.t1059
+  - attack.execution
